@@ -5,18 +5,18 @@
 See: .paul/PROJECT.md (updated 2026-03-04)
 
 **Core value:** Standardized skill creation via syntax specs + automated scaffolding.
-**Current focus:** Phase 3 complete — ready for Phase 4
+**Current focus:** Phase 3.1 complete — ready for Phase 4
 
 ## Current Position
 
 Milestone: v0.1 Initial Release
-Phase: 3 of 5 complete — Phase 4 ready
-Plan: All Phase 3 plans complete
+Phase: 4 of 6 complete — Phase 4 (Validation) ready
+Plan: All Phase 3.1 plans complete
 Status: Ready for next PLAN (Phase 4: Validation)
-Last activity: 2026-03-04 — Phase 3 transition complete
+Last activity: 2026-03-04 — Phase 3.1 (Distill) inserted and completed
 
 Progress:
-- Milestone: [██████░░░░] 60%
+- Milestone: [██████░░░░] 67%
 
 ## Loop Position
 
@@ -32,6 +32,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 | 01-syntax-specs | 2/2 | ~17 min | 8.5 min |
 | 02-skillsmith-discovery | 1/1 | ~5 min | 5 min |
 | 03-skillsmith-scaffolding | 1/1 | ~3 min | 3 min |
+| 3.1-skillsmith-distill | 1/1 | ~3 min | 3 min |
 
 ## Accumulated Context
 
@@ -46,6 +47,8 @@ PLAN ──▶ APPLY ──▶ UNIFY
 | Skill spec as contract between discover/scaffold | 02-01 | Structured output consumed by scaffolding |
 | Rules as compact enforcement, not spec copies | 03-01 | Must Have + Anti-Patterns extracted from specs |
 | 6 rules files, no rules-for-rules | 03-01 | One per consumer folder type |
+| Chunk by functional outcome, not source structure | 3.1-01 | Chunks grouped by what they help you DO |
+| Chunks stand alone — no cross-chunk dependencies | 3.1-01 | Each chunk independently loadable |
 
 ### Deferred Issues
 None.
@@ -53,37 +56,29 @@ None.
 ## Phase 1 Deliverables
 
 All 7 specs in `specs/`:
-- `entry-point.md` — Skill entry points (YAML frontmatter + 5 XML sections)
-- `tasks.md` — Step-based workflows (user stories + plain checklists)
-- `templates.md` — Fill-in-the-blank structures (placeholder conventions)
-- `frameworks.md` — Read-only domain knowledge (teaching patterns)
-- `context.md` — Mutable user/business state (onboarding pattern)
-- `checklists.md` — Reusable QA validation (pass/fail criteria)
-- `rules.md` — Meta-skill enforcement layer (paths frontmatter)
+- `entry-point.md`, `tasks.md`, `templates.md`, `frameworks.md`, `context.md`, `checklists.md`, `rules.md`
 
 ## Phase 2 Deliverables
 
-Skillsmith meta-skill (discovery phase):
-- `skillsmith/skillsmith.md` — Suite entry point (discover + scaffold commands)
-- `skillsmith/tasks/discover.md` — 5-phase conversational discovery interview
-- `skillsmith/templates/skill-spec.md` — Output template (scaffolding input format)
+- `skillsmith/skillsmith.md` — Suite entry point
+- `skillsmith/tasks/discover.md` — 5-phase discovery interview
+- `skillsmith/templates/skill-spec.md` — Skill spec output template
 
 ## Phase 3 Deliverables
 
-Skillsmith meta-skill (scaffolding phase):
-- `skillsmith/tasks/scaffold.md` — 5-step scaffolding workflow (spec → directory)
-- `skillsmith/rules/entry-point-rules.md` — Entry point authoring rules
-- `skillsmith/rules/tasks-rules.md` — Tasks authoring rules
-- `skillsmith/rules/templates-rules.md` — Templates authoring rules
-- `skillsmith/rules/frameworks-rules.md` — Frameworks authoring rules
-- `skillsmith/rules/context-rules.md` — Context authoring rules
-- `skillsmith/rules/checklists-rules.md` — Checklists authoring rules
+- `skillsmith/tasks/scaffold.md` — Scaffolding workflow
+- `skillsmith/rules/*.md` — 6 authoring rules files
+
+## Phase 3.1 Deliverables
+
+- `skillsmith/tasks/distill.md` — Source material → framework chunks workflow
+- `skillsmith/skillsmith.md` — Updated with /skillsmith distill command
 
 ## Session Continuity
 
 Last session: 2026-03-04
-Stopped at: Phase 3 complete, transition done
-Next action: Fresh session → /paul:plan for Phase 4 (Validation)
+Stopped at: Phase 3.1 complete
+Next action: /paul:plan for Phase 4 (Validation)
 Resume file: .paul/ROADMAP.md
 
 ---

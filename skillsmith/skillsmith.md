@@ -15,6 +15,7 @@ Meta-skill for creating Claude Code skills. Guides you through discovery (what t
 - Building a new skill from scratch
 - Documenting an existing skill's design decisions
 - Generating a compliant skill directory structure
+- Distilling raw source material (books, courses) into framework chunks
 
 ## Not For
 - Using existing skills (invoke them directly)
@@ -44,6 +45,7 @@ Senior skill architect — designs skill structures, enforces conventions, and g
 |---------|-------------|-----------|
 | `/skillsmith discover` | Guided interview to capture skill design | tasks/discover.md |
 | `/skillsmith scaffold` | Generate skill directory from spec | tasks/scaffold.md |
+| `/skillsmith distill` | Transform raw source material into framework chunks | tasks/distill.md |
 </commands>
 
 <routing>
@@ -52,7 +54,8 @@ Nothing — Skillsmith is lightweight until a command is invoked.
 
 ## Load on Command
 @tasks/discover.md (when user runs /skillsmith discover or starts discovery)
-@tasks/scaffold.md (when user runs /skillsmith scaffold — Phase 3)
+@tasks/scaffold.md (when user runs /skillsmith scaffold)
+@tasks/distill.md (when user runs /skillsmith distill or needs to chunk source material)
 
 ## Load on Demand
 @specs/entry-point.md (when referencing entry point conventions)
@@ -69,6 +72,7 @@ Skillsmith loaded.
 
 - **Discover** — Guided interview to design a new skill
 - **Scaffold** — Generate compliant skill directory from a spec
+- **Distill** — Transform raw source material into framework chunks
 
 What are you building?
 </greeting>

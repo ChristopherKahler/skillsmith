@@ -8,7 +8,7 @@ Build a universal skill framework from syntax specs through a working meta-skill
 
 **v0.1 Initial Release** (v0.1.0)
 Status: In progress
-Phases: 3 of 5 complete
+Phases: 4 of 6 complete
 
 ## Phases
 
@@ -21,6 +21,7 @@ Phases: 3 of 5 complete
 | 1 | Syntax Specs | 2 | Complete | 2026-03-04 |
 | 2 | Skillsmith Discovery | 1 | Complete | 2026-03-04 |
 | 3 | Skillsmith Scaffolding | 1 | Complete | 2026-03-04 |
+| 3.1 | Skillsmith Distill [INSERTED] | 1 | Complete | 2026-03-04 |
 | 4 | Validation | 1 | Not started | - |
 | 5 | Audit | 1 | Not started | - |
 
@@ -73,6 +74,19 @@ Phases: 3 of 5 complete
 **Plans:**
 - [x] 03-01: Build scaffolding phase
 
+### Phase 3.1: Skillsmith Distill [INSERTED]
+
+**Goal:** Build `/skillsmith distill` command — transform raw source material (books, courses, transcripts) into structured framework chunks
+**Depends on:** Phase 3 (needs framework rules for validation)
+**Research:** None (proven pattern from Expert Secrets / Traffic Secrets chunking)
+
+**Scope:**
+- Distill task workflow (assess → plan → extract → consolidate → validate)
+- Entry point updated with distill command and routing
+
+**Plans:**
+- [x] 3.1-01: Build distill task and update entry point
+
 ### Phase 4: Validation
 
 **Goal:** Create one new skill end-to-end using `/skillsmith` to prove the framework works
@@ -103,4 +117,4 @@ Phases: 3 of 5 complete
 
 ---
 *Roadmap created: 2026-03-04*
-*Last updated: 2026-03-04 after Phase 3*
+*Last updated: 2026-03-04 after Phase 3.1*
