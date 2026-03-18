@@ -2,27 +2,27 @@
 
 ## Project Reference
 
-See: .paul/PROJECT.md (updated 2026-03-04)
+See: .paul/PROJECT.md (updated 2026-03-17)
 
 **Core value:** Standardized skill creation via syntax specs + automated scaffolding.
-**Current focus:** Phase 3.1 complete — ready for Phase 4
+**Current focus:** v0.1 MILESTONE COMPLETE — all phases finished
 
 ## Current Position
 
-Milestone: v0.1 Initial Release
-Phase: 4 of 6 complete — Phase 4 (Validation) ready
-Plan: All Phase 3.1 plans complete
-Status: Ready for next PLAN (Phase 4: Validation)
-Last activity: 2026-03-04 — Phase 3.1 (Distill) inserted and completed
+Milestone: v0.1 Initial Release — COMPLETE
+Phase: 6 of 6 complete
+Plan: All plans complete
+Status: Milestone complete
+Last activity: 2026-03-17 — Phase 5 (Audit) complete, milestone closed
 
 Progress:
-- Milestone: [██████░░░░] 67%
+- Milestone: [██████████] 100%
 
 ## Loop Position
 
 ```
 PLAN ──▶ APPLY ──▶ UNIFY
-  ✓        ✓        ✓     [Loop complete - ready for next PLAN]
+  ✓        ✓        ✓     [Loop complete — milestone finished]
 ```
 
 ## Performance Metrics
@@ -33,6 +33,8 @@ PLAN ──▶ APPLY ──▶ UNIFY
 | 02-skillsmith-discovery | 1/1 | ~5 min | 5 min |
 | 03-skillsmith-scaffolding | 1/1 | ~3 min | 3 min |
 | 3.1-skillsmith-distill | 1/1 | ~3 min | 3 min |
+| 04-validation | 1/1 | organic | N/A |
+| 05-audit | 1/1 | ~5 min | 5 min |
 
 ## Accumulated Context
 
@@ -49,6 +51,7 @@ PLAN ──▶ APPLY ──▶ UNIFY
 | 6 rules files, no rules-for-rules | 03-01 | One per consumer folder type |
 | Chunk by functional outcome, not source structure | 3.1-01 | Chunks grouped by what they help you DO |
 | Chunks stand alone — no cross-chunk dependencies | 3.1-01 | Each chunk independently loadable |
+| Audit as reusable workflow, not one-off task | 05-01 | /skillsmith audit available on demand |
 
 ### Deferred Issues
 None.
@@ -74,11 +77,20 @@ All 7 specs in `specs/`:
 - `skillsmith/tasks/distill.md` — Source material → framework chunks workflow
 - `skillsmith/skillsmith.md` — Updated with /skillsmith distill command
 
+## Phase 4 Deliverables
+
+- Validated organically — multiple skills created using /skillsmith in production use
+
+## Phase 5 Deliverables
+
+- `skillsmith/tasks/audit.md` — Audit workflow (single + batch modes)
+- `skillsmith/skillsmith.md` — Updated with /skillsmith audit command (now 4 commands)
+
 ## Session Continuity
 
-Last session: 2026-03-04
-Stopped at: Phase 3.1 complete
-Next action: /paul:plan for Phase 4 (Validation)
+Last session: 2026-03-17
+Stopped at: v0.1 milestone complete
+Next action: /paul:complete-milestone or /paul:milestone for next milestone
 Resume file: .paul/ROADMAP.md
 
 ---

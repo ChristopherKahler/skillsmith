@@ -7,8 +7,8 @@ Build a universal skill framework from syntax specs through a working meta-skill
 ## Current Milestone
 
 **v0.1 Initial Release** (v0.1.0)
-Status: In progress
-Phases: 4 of 6 complete
+Status: Complete
+Phases: 6 of 6 complete
 
 ## Phases
 
@@ -22,8 +22,8 @@ Phases: 4 of 6 complete
 | 2 | Skillsmith Discovery | 1 | Complete | 2026-03-04 |
 | 3 | Skillsmith Scaffolding | 1 | Complete | 2026-03-04 |
 | 3.1 | Skillsmith Distill [INSERTED] | 1 | Complete | 2026-03-04 |
-| 4 | Validation | 1 | Not started | - |
-| 5 | Audit | 1 | Not started | - |
+| 4 | Validation | 1 | Complete | 2026-03-17 |
+| 5 | Audit | 1 | Complete | 2026-03-17 |
 
 ## Phase Details
 
@@ -99,22 +99,22 @@ Phases: 4 of 6 complete
 - Document any spec adjustments needed
 
 **Plans:**
-- [ ] 04-01: End-to-end skill creation test
+- [x] 04-01: End-to-end skill creation test (validated organically — multiple skills built in production)
 
 ### Phase 5: Audit
 
-**Goal:** Audit existing skills against the syntax standards and document gaps
+**Goal:** Build `/skillsmith audit` command — reusable workflow to assess any skill against syntax specs
 **Depends on:** Phase 4 (specs finalized after validation)
 **Research:** Unlikely
 
 **Scope:**
-- Inventory existing skills
-- Compare each against specs
-- Generate compliance report
+- Audit task workflow (single-skill and batch modes)
+- Entry point updated with audit command and routing
+- Compliance report output format
 
 **Plans:**
-- [ ] 05-01: Audit existing skills
+- [x] 05-01: Build audit workflow and update entry point
 
 ---
 *Roadmap created: 2026-03-04*
-*Last updated: 2026-03-04 after Phase 3.1*
+*Last updated: 2026-03-17 — v0.1 milestone complete*

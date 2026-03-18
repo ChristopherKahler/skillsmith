@@ -94,8 +94,8 @@ Anyone can build consistent, high-quality Claude Code skills in minutes using st
 |--------|--------|---------|--------|
 | Syntax specs complete | 7 folder types | 7 | Complete |
 | Skillsmith meta-skill functional | Discovery + Scaffolding | Both complete | Complete |
-| First skill built with framework | 1 end-to-end test | 0 | Not started |
-| Existing skills audited | All current skills | 0 | Not started |
+| First skill built with framework | 1 end-to-end test | Multiple | Complete |
+| Audit workflow built | /skillsmith audit command | Functional | Complete |
 
 ## Tech Stack
 
@@ -114,4 +114,4 @@ Anyone can build consistent, high-quality Claude Code skills in minutes using st
 
 ---
 *Created: 2026-03-04*
-*Last updated: 2026-03-04 after Phase 3*
+*Last updated: 2026-03-17 after Phase 5 — v0.1 milestone complete*
