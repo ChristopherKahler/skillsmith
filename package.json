@@ -1,0 +1,32 @@
+{
+  "name": "@chrisai/skillsmith",
+  "version": "0.1.0",
+  "description": "Build consistent Claude Code skills using standardized syntax and guided workflows",
+  "bin": {
+    "skillsmith": "bin/install.js"
+  },
+  "files": [
+    "bin",
+    "skillsmith",
+    "specs",
+    "README.md",
+    "terminal.svg"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "skills",
+    "scaffolding",
+    "skillsmith",
+    "paul",
+    "seed"
+  ],
+  "author": "Chris Kahler",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherKahler/skillsmith.git"
+  },
+  "homepage": "https://github.com/ChristopherKahler/skillsmith#readme"
+}

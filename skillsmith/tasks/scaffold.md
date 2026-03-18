@@ -1,5 +1,5 @@
 <purpose>
-Generate a compliant skill directory from a completed skill spec. Reads the structured output of /skillsmith discover and creates all files — entry point, tasks, frameworks, templates, context, checklists — following syntax specs as authoring rules.
+Generate a compliant skill directory from a completed skill spec. Reads the structured output of /skillsmith discover and creates all files — entry point, tasks, frameworks, templates, context, checklists — following syntax specs as authoring rules. Optionally creates the skill in apps/ with its own git repo and PAUL-managed build for larger skills.
 </purpose>
 
 <user-story>
@@ -61,17 +61,40 @@ Get the skill spec to scaffold from.
 **Wait for confirmation before continuing.**
 </step>
 
+<step name="choose_location">
+Determine where to create the skill directory.
+
+Ask: "Where should I create this skill?"
+- **`apps/{name}/`** — Own git repo, shareable via GitHub (recommended for frameworks/tools you'll distribute)
+- **Current directory** — Create `{skill-name}/` right here
+- **Custom path** — Specify a path
+
+**Wait for response.**
+
+<if condition="user chooses apps/">
+1. Create `apps/{skill-name}/`
+2. Run `git init -b main` in the new directory
+3. Note: git commit will happen after all files are created
+</if>
+
+<if condition="user chooses current directory or custom path">
+1. Create `{skill-name}/` at the specified location
+2. No git initialization
+</if>
+</step>
+
 <step name="create_directory_structure">
 Create the skill directory and subdirectories.
 
-1. Create the root directory: `{skill-name}/`
+1. Create the root directory at the chosen location
 
 2. Create subdirectories ONLY for folder types that have entries in the spec:
-   - If tasks listed → create `{skill-name}/tasks/`
-   - If frameworks listed → create `{skill-name}/frameworks/`
-   - If templates listed → create `{skill-name}/templates/`
-   - If context listed → create `{skill-name}/context/`
-   - If checklists listed → create `{skill-name}/checklists/`
+   - If tasks listed → create `tasks/`
+   - If frameworks listed → create `frameworks/`
+   - If templates listed → create `templates/`
+   - If context listed → create `context/`
+   - If checklists listed → create `checklists/`
+   - If data directories listed → create `data/{type}/` for each type
 
 3. Do NOT create empty directories for folder types with no entries
 
@@ -213,6 +236,44 @@ Ask: "Does this look right? Any adjustments?"
 **Important:** Every generated file must have enough scaffolded content to be immediately useful. Do NOT generate empty shells or files that just say "TODO".
 </step>
 
+<step name="paul_integration">
+For skills with 10+ total files, offer PAUL-managed build.
+
+1. Count total files to create (entry point + all auxiliary files)
+
+2. If fewer than 10 files: skip this step, continue to validate_and_report
+
+3. If 10+ files, ask:
+   > "This skill has {N} files to create. Want to manage the build with PAUL?"
+   > - **Yes** — phased, multi-session managed build
+   > - **No** — dump all files now in this session
+
+4. If user says **No**: continue to validate_and_report (all files already created above)
+
+5. If user says **Yes**:
+
+   a. Check if PAUL is installed (look for paul commands in available skills)
+
+   b. If PAUL is NOT installed:
+      > "PAUL isn't installed. Want to install it globally? (recommended)"
+      > - **Yes** → install PAUL globally, then continue
+      > - **No** → fall back to dump all files now (same as step 4)
+
+   c. If PAUL is available (installed or just installed):
+      - Copy the SKILL-SPEC.md into the project directory as reference
+      - Run `/paul:init` in the project directory
+      - Pass the skill spec as context — PAUL should derive milestones and phases from the spec's content architecture WITHOUT asking the user questions it can answer from the spec
+      - Suggest phase structure based on skill anatomy:
+        - Phase 1: Entry point + directory structure
+        - Phase 2: Task files (the heavy logic)
+        - Phase 3: Data layer / frameworks / templates
+        - Phase 4: Checklists + validation
+        - Phase 5: Integration testing (install as command, test invocation)
+      - After PAUL init completes, report:
+        > "PAUL initialized. Run `/paul:plan` to start Phase 1."
+      - **STOP HERE** — do not continue to validate_and_report. PAUL manages the rest.
+</step>
+
 <step name="validate_and_report">
 Validate generated files and report results.
 
@@ -274,10 +335,15 @@ Created in the current working directory or user-specified path.
 
 <acceptance-criteria>
 - [ ] Skill spec successfully parsed with all sections extracted
+- [ ] User chose location (apps/ with git, current dir, or custom path)
+- [ ] If apps/: directory created with git init
 - [ ] Directory structure created with only populated folder types
 - [ ] Entry point has correct YAML frontmatter and all 5 XML sections
 - [ ] All auxiliary files follow their respective syntax specs
 - [ ] Generated files contain meaningful scaffolded content (not empty placeholders)
-- [ ] Validation report shows all files pass rules
+- [ ] If 10+ files: user offered PAUL-managed build option
+- [ ] If PAUL chosen and not installed: user prompted to install globally
+- [ ] If PAUL path: paul:init completed with spec as context, phases proposed
+- [ ] If non-PAUL path: validation report shows all files pass rules
 - [ ] User informed of results and next steps
 </acceptance-criteria>
