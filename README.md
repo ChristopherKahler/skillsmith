@@ -227,7 +227,7 @@ Skillsmith is part of a broader Claude Code extension ecosystem:
 | **PAUL** | Project orchestration — Plan, Apply, Unify Loop | [GitHub](https://github.com/ChristopherKahler/paul) |
 | **SEED** | Typed project incubator — guided ideation through graduation | [GitHub](https://github.com/ChristopherKahler/seed) |
 | **Skillsmith** | Skill builder — standardized syntax specs + guided workflows | You are here |
-| **CC Strategic AI** | Skool community — courses, community, live support | [Skool](https://skool.com/cc-strategic-ai) |
+| **CC Strategic AI** | Skool community — courses, community, live support | [Skool](https://chrisai.cv/skool) |
 
 All tools are standalone. SEED was built with Skillsmith. Scaffold can optionally hand off to PAUL for phased builds. No dependencies required.
 
