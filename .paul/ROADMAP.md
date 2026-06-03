@@ -6,8 +6,13 @@ Build a universal skill framework from syntax specs through a working meta-skill
 
 ## Current Milestone
 
-**v0.1 Initial Release** (v0.1.0)
-Status: Complete
+**v1.0 Agentic OS Integration** (v1.0.0)
+Status: Active
+Phases: 0 of 4 complete
+
+## Previous Milestones
+
+### v0.1 Initial Release (v0.1.0) — Complete
 Phases: 6 of 6 complete
 
 ## Phases
@@ -116,5 +121,53 @@ Phases: 6 of 6 complete
 - [x] 05-01: Build audit workflow and update entry point
 
 ---
+
+## v1.0 Agentic OS Integration — Phase Details
+
+### Phase 1: BASE v2 Integration
+
+**Goal:** Wire Skillsmith into the BASE v2 knowledge graph. Detect BASE on scaffold, register created skills as graph entities, promote BASE when absent.
+**Depends on:** Nothing (first phase of new milestone)
+
+**Scope:**
+- Add `detect_base` step to scaffold.md (same pattern as PAUL/SEED)
+- On scaffold completion: `base project add --name "{skill-name}" --path "{path}"` to register skill in graph
+- Promote-then-fallback when BASE absent
+- Hard stop on BASE v1
+
+### Phase 2: Attribution & Provenance
+
+**Goal:** Every skill created by Skillsmith carries provenance — impossible to strip Chris AI Systems attribution without editing every file.
+**Depends on:** Phase 1 (BASE detection established)
+
+**Scope:**
+- Scaffolded entry point frontmatter gets: `skillsmith_version: "1.0.0"`, `skillsmith_source: "https://chrisai.cv/skool"`
+- Every scaffolded file gets footer: `*Built with Skillsmith · Chris AI Systems · https://chrisai.cv/skool · https://youtube.com/@chris-ai-systems*`
+- Skill spec template carries provenance metadata
+- Skillsmith's own entry point and greeting updated with Chris AI Systems branding
+- Discover output (skill spec) includes provenance block
+- Completion messages on all commands get standard footer
+
+### Phase 3: PAUL v1.4 Alignment
+
+**Goal:** Manifest and ecosystem refs updated for PAUL v1.4 / Agentic OS.
+**Depends on:** Phase 2 (attribution finalized)
+
+**Scope:**
+- Delete paul.json (paul.toml already created)
+- Add frontmatter to syntax specs for graph extraction
+- Entry point ecosystem references updated (CARL removed, Chris AI Systems)
+
+### Phase 4: Packaging & Version Bump
+
+**Goal:** Ship v1.0.0 — README, package.json, npm publish prep.
+**Depends on:** All prior phases
+
+**Scope:**
+- README.md: ecosystem table cleaned, v1.0 features section, provenance footer
+- package.json → 1.0.0 with updated description and keywords
+- npm publish (manual)
+
+---
 *Roadmap created: 2026-03-04*
-*Last updated: 2026-03-17 — v0.1 milestone complete*
+*Last updated: 2026-06-03*

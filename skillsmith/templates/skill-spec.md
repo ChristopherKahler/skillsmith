@@ -16,6 +16,8 @@ Output format for the discovery workflow. This template is filled during `/skill
 | Version | 0.1.0 |
 | Category | {category} |
 | Description | {description} |
+| Skillsmith Version | 1.0.0 |
+| Skillsmith Source | https://chrisai.cv/skool |
 
 ## Persona
 

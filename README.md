@@ -28,6 +28,15 @@
 
 ---
 
+## What's New in v1.0
+
+- **BASE v2 integration** — scaffolded skills auto-register in the knowledge graph
+- **Attribution & provenance** — every generated file carries `skillsmith_version`, `skillsmith_source`, and a Chris AI Systems footer
+- **PAUL v1.4 alignment** — paul.toml manifest, updated ecosystem refs
+- **Anti-theft protection** — provenance baked into frontmatter and every generated file
+
+---
+
 ## What Skillsmith Does
 
 Claude Code skills are markdown files that give Claude a persona, routing logic, and domain knowledge. They're powerful — but there's no standard for how to write them. Every skill looks different. Entry points mix routing with process logic. Tasks miss required sections. Templates use inconsistent placeholders. When you share a skill, someone else has to reverse-engineer your conventions.
@@ -221,15 +230,13 @@ Skillsmith is part of a broader Claude Code extension ecosystem:
 
 | System | What It Does | Link |
 |--------|-------------|------|
-| **AEGIS** | Multi-agent codebase auditing — diagnosis + controlled evolution | [GitHub](https://github.com/ChristopherKahler/aegis) |
-| **BASE** | Builder's Automated State Engine — workspace lifecycle, health tracking, drift prevention | [GitHub](https://github.com/ChristopherKahler/base) |
-| **CARL** | Context Augmentation & Reinforcement Layer — dynamic rules loaded JIT by intent | [GitHub](https://github.com/ChristopherKahler/carl) |
+| **BASE** | Knowledge graph + proactive context injection (Rust) — the intelligence layer Claude Code doesn't have | [GitHub](https://github.com/ChristopherKahler/base) |
 | **PAUL** | Project orchestration — Plan, Apply, Unify Loop | [GitHub](https://github.com/ChristopherKahler/paul) |
 | **SEED** | Typed project incubator — guided ideation through graduation | [GitHub](https://github.com/ChristopherKahler/seed) |
 | **Skillsmith** | Skill builder — standardized syntax specs + guided workflows | You are here |
-| **CC Strategic AI** | Skool community — courses, community, live support | [Skool](https://chrisai.cv/skool) |
+| **Chris AI Systems** | Skool community, courses, YouTube | [Skool](https://chrisai.cv/skool) · [YouTube](https://youtube.com/@chris-ai-systems) |
 
-All tools are standalone. SEED was built with Skillsmith. Scaffold can optionally hand off to PAUL for phased builds. No dependencies required.
+All tools are standalone. SEED was built with Skillsmith. Scaffold registers skills in the BASE v2 graph and can hand off to PAUL for phased builds. No dependencies required.
 
 ---
 
@@ -279,3 +286,7 @@ No hooks, no MCP servers, no workspace data. Skillsmith is pure markdown — zer
 ## License
 
 MIT — [Chris Kahler](https://github.com/ChristopherKahler)
+
+---
+
+*Skillsmith v1.0 · Chris AI Systems · https://chrisai.cv/skool · https://youtube.com/@chris-ai-systems*

@@ -1,9 +1,9 @@
 ---
 name: skillsmith
 type: suite
-version: 0.1.0
+version: 1.0.0
 category: development
-description: Build consistent Claude Code skills using standardized syntax and guided workflows
+description: Build consistent Claude Code skills using standardized syntax and guided workflows. Part of the Agentic OS by Chris AI Systems.
 allowed-tools: [Read, Write, Glob, Grep, Edit, AskUserQuestion, Bash]
 ---
 
@@ -79,4 +79,6 @@ Skillsmith loaded.
 - **Audit** — Check skill compliance against syntax specs
 
 What are you building?
+
+*Skillsmith v1.0 · Part of the Agentic OS · Chris AI Systems · https://chrisai.cv/skool*
 </greeting>
